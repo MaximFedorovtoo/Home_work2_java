@@ -18,17 +18,23 @@ class Homework2{
 
 
     public static void main(String[] args) {
-        stringInit(20, 'n', 'v');
+        stringInit(6, 'n', 'v');
         addText("TEXT", 100);
     }
     
     private static void stringInit(int n, char c1 ,char c2){
         String temp = "";
-        for (int index = 0; index < n/2; index++) {
-            temp += c1;
-            temp += c2;
+        if (n % 2 == 0 && n > 0){
+            for (int index = 0; index < n/2; index++) {
+                temp += c1;
+                temp += c2;
+            }
+            System.out.println(temp);
+        }else
+        {
+            System.out.println("Вы ввели не верное число");
         }
-        System.out.println(temp);
+        
     }
 
     public static void addText(String text, int quantity){
